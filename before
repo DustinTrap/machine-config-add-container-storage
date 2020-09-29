@@ -1,0 +1,13 @@
+[root@rhel7ws ocp-vsphere]# oc debug node/ocp4-w2nvm-worker-g4smh
+Starting pod/ocp4-w2nvm-worker-g4smh-debug ...
+To use host binaries, run `chroot /host`
+Pod IP: 172.102.3.28
+If you don't see a command prompt, try pressing enter.
+sh-4.2# chroot /host
+sh-4.4# df -h /var/lib/containers
+Filesystem                            Size  Used Avail Use% Mounted on
+/dev/mapper/coreos-luks-root-nocrypt  120G   12G  108G  10% /var
+sh-4.4# mount | grep -i sdb
+sh-4.4# mount | grep -i sda
+/dev/sda1 on /boot type ext4 (rw,relatime,seclabel)
+/dev/sda2 on /boot/efi type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
