@@ -1,0 +1,2 @@
+[root@rhel7ws ocp-vsphere]# oc create -f mc_sdb.yaml
+machineconfig.machineconfiguration.openshift.io/98-var-lib-containers created
